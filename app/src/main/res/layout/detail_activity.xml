@@ -12,7 +12,8 @@
     <TextView
         android:id="@+id/tvFristName"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/firstname_text_height" />
+        android:layout_height="@dimen/firstname_text_height"
+        android:transitionName="@string/first_name"/>
 
     <TextView
         android:id="@+id/tvLastName"
