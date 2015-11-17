@@ -5,4 +5,5 @@
     <dimen name="age_text_height">32dp</dimen>
     <dimen name="phonenum_text_height">32dp</dimen>
     <dimen name="image_dimen">32dp</dimen>
+    <dimen name="person_view_text_size">14sp</dimen>
 </resources>
