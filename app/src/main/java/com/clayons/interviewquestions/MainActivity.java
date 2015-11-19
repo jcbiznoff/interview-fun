@@ -21,19 +21,19 @@ import java.util.List;
  */
 public class MainActivity extends AppCompatActivity{
 
+    private MainPresenter mPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setHooks();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
-        initPerson();
+        mPresenter = new MainPresenter(new MainModel(), new MainView());
+        mPresenter.onCreate(this);
     }
 
-    private void initPerson() {
-        List<Person> persons = new ArrayList<>(5);
-        persons.add(new Person("John", "Doe", 20, "111-222-3333", "http://i58.tinypic.com/2z6fa6t.jpg"));
-        persons.add(new Person("Jane", "Kish", 30, "111-222-3334", "http://i58.tinypic.com/2z6fdsl.jpg"));
-        persons.add(new Person("Sam", "Jackson", 24, "111-222-3335", "http://i60.tinypic.com/2z6fdbr.jpg"));
-        persons.add(new Person("Pete", "Dorey", 15, "111-222-3336", "http://i57.tinypic.com/2z6fb0p.jpg"));
-        persons.add(new Person("George", "Mime", 5, "111-222-3337", "http://i59.tinypic.com/2z6fakl.jpg"));
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mPresenter.onResume(this);
     }
 }
