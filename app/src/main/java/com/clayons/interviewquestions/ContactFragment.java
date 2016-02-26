@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * First name and last name should be editable. add a save button for storing this information.
  * Create an interface class to store the data in a persistent storage.
  * Create an interface to sync database with a server.
- * <p/>
+ * <p>
  * Condition:
  * Alternate the background color for the list on MainActivity - first white, second black, third white, etc.
  * "Like" button on the detail page should override the background color on the main page with a blue color background.
@@ -83,7 +83,7 @@ public class ContactFragment extends Fragment implements AdapterView.OnItemClick
     /**
      * Callback method to be invoked when an item in this AdapterView has
      * been clicked.
-     * <p/>
+     * <p>
      * Implementers can call getItemAtPosition(position) if they need
      * to access the data associated with the selected item.
      *

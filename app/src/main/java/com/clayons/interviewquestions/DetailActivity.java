@@ -15,6 +15,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     private boolean initialStatus;
     private Person person;
+    private Button buttonLike;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +37,10 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         Picasso.with(this).load(person.getPhotoUrl()).into(ivAvatar);
         tvFristName.setText(person.getFirstName());
         tvLastName.setText(person.getLastName());
-        tvAge.setText(person.getAge());
+        tvAge.setText(String.valueOf(person.getAge()));
         tvPhoneNum.setText(person.getPhoneNum());
 
-        Button buttonLike = (Button) findViewById(R.id.btnLike);
+        buttonLike = (Button) findViewById(R.id.btnLike);
         initialStatus = person.isFavorited();
         buttonLike.setText(initialStatus ? getString(R.string.unlike) : getString(R.string.like));
         buttonLike.setOnClickListener(this);
@@ -55,6 +56,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
 
         person.setFavorited(!person.isFavorited());
+        buttonLike.setText(person.isFavorited() ? getString(R.string.unlike) : getString(R.string.like));
 
     }
 

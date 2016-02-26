@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/btnLike"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/image_dimen"
+        android:layout_height="64dp"
         android:gravity="center"
         android:text="LIKE" />
 
