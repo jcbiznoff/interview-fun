@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">InterviewQuestions</string>
+    <string name="unlike">unlike</string>
+    <string name="like">like</string>
 </resources>
